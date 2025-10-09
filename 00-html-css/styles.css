@@ -1,0 +1,49 @@
+:root {
+    --primary: #3b4550;
+    --primary-dark: #0a3d66;
+    --primary-hover: #0d5ba8;
+    --primary-light: #09f;
+    --background: #06182a;
+    --text-primary: #ffffff;
+    --text-secondary: #cdb5e1;
+    --text-muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.1);
+    --card-bg: #1e293b;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --input-bg: #1e293b;
+    --hlsa-example: hsla(210, 100%, 56%, 1);
+}
+
+article {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    margin-bottom: 16px;
+    border-radius: 0.5rem;
+    box-shadow: 0px 1px 3px 0px var(--shadow);
+
+    svg {
+        color: var(--primary-light);
+        background: rgba(0, 153, 255, 0.3);
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        padding: 16px;
+    }
+
+    p {
+        color: var(--text-muted);
+    }
+
+    h3 {
+        font-weight: 500;
+    }
+}
+
+/* El footer que está dentro del section que es el 2º hijo del main */
+/* El ">" significa que es el hijo directo*/
+main>section:nth-child(2) footer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
