@@ -182,8 +182,13 @@ nav {
     background-color: var(--primary-hover);
 }
 
+main > section:nth-child(2) {
+    padding: 0rem 4rem;
+}
+
 main > section:nth-child(2) header{
     align-items: center;
+    text-align: center;
     padding-top: 5rem;
     padding-bottom: 4rem;
     display: flex;
@@ -193,7 +198,7 @@ main > section:nth-child(2) header{
     }
     p{
         text-align: center;
-        width: 50%;
+        width: 70%;
     }
 }
 
