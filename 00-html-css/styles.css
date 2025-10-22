@@ -20,6 +20,8 @@
     --hlsa-example: hsla(210, 100%, 56%, 1);
 }
 
+
+/* Estilos generales en todos los html */
 body {
     font-family: system-ui;
     background-color: var(--background);
@@ -58,8 +60,8 @@ body>header {
 
     svg {
         color: var(--primary-light);
-        width: 50px;
-        height: 50px;
+        width: 3rem;
+        height: 3rem;
     }
 
     h2 {
@@ -70,7 +72,7 @@ body>header {
 
     nav {
         display: flex;
-        gap: 50px;
+        gap: 3rem;
         font-size: 1.2rem;
 
         a {
@@ -94,14 +96,14 @@ body>header {
 
     div {
         display: flex;
-        gap: 20px;
+        gap: 1rem;
         align-items: center;
 
         a {
             padding: .5rem 1.25rem;
             text-decoration: none;
             font-weight: 600;
-            border-radius: 12px;
+            border-radius: .75rem;
             white-space: nowrap;
             transition: all .075s;
 
@@ -144,6 +146,39 @@ body>header {
     }
 }
 
+button {
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-weight: 700;
+    padding: .75rem 1.5rem;
+    margin: 0;
+    border-radius: .75rem;
+    border: none;
+    white-space: nowrap;
+    transition: all .075s;
+
+    &:hover {
+        scale: 1.15;
+        outline: 2px solid var(--text-primary);
+        outline-offset: 1px;
+    }
+
+    &:active {
+        scale: 1;
+        background-color: var(--primary-hover);
+    }
+}
+
+body>footer {
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1rem;
+    border-top: solid var(--border);
+}
+
+
+/* estilos de index.html */
 .hero {
     display: flex;
     flex-direction: column;
@@ -166,14 +201,15 @@ body>header {
         display: flex;
         align-items: center;
         padding: 0.5rem;
-        gap: 10px;
-        border-radius: 5px;
+        gap: 2rem;
+        border-radius: .75rem;
         width: 100%;
         max-width: 50rem;
 
         input {
-            margin-left: 2rem;
+            margin-left: 1rem;
             margin-right: auto;
+            padding-right: 1rem;
             flex: 1 1 auto;
             min-width: 20rem;
             border: none;
@@ -185,31 +221,7 @@ body>header {
     }
 }
 
-button {
-    background-color: var(--primary-light);
-    color: var(--text-primary);
-    cursor: pointer;
-    font-weight: 700;
-    padding: .75rem 1.5rem;
-    margin: 0;
-    border-radius: 0.5rem;
-    border: none;
-    white-space: nowrap;
-    transition: all .075s;
-
-    &:hover {
-        scale: 1.15;
-        outline: 2px solid var(--text-primary);
-        outline-offset: 1px;
-    }
-
-    &:active {
-        scale: 1;
-        background-color: var(--primary-hover);
-    }
-}
-
-main>section:nth-child(2) {
+.home-main-section {
     padding: 0rem 4rem;
 
     header {
@@ -237,24 +249,24 @@ main>section:nth-child(2) {
         gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
-        article {
+        .home-card {
             display: flex;
             flex-direction: column;
             text-align: center;
             align-items: center;
             background-color: var(--card-bg);
             padding: 2rem;
-            margin-bottom: 16px;
+            margin-bottom: 2rem;
             border-radius: 0.5rem;
             box-shadow: 0px 1px 3px 0px var(--shadow);
 
             svg {
                 color: var(--primary-light);
                 background: rgba(0, 153, 255, 0.3);
-                width: 64px;
-                height: 64px;
-                border-radius: 100%;
-                padding: 16px;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 2rem;
+                padding: 1rem;
                 margin-bottom: 1rem;
             }
 
@@ -269,9 +281,89 @@ main>section:nth-child(2) {
     }
 }
 
-body>footer {
-    color: var(--text-muted);
+
+/* Estilos de empleos.html */
+#empleos-main {
+    padding: 3rem 5rem;
+}
+
+.jobs-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 1rem;
-    border-top: solid var(--border);
+    margin-bottom: 2rem;
+
+    p {
+        color: var(--text-muted);
+    }
+
+    .search-bar {
+        color: var(--text-muted);
+        background-color: var(--input-bg);
+        display: flex;
+        align-items: center;
+        padding: .75rem;
+        margin-bottom: .75rem;
+        border-radius: .75rem;
+        width: 100%;
+
+        input {
+            padding: 0 7rem;
+            width: 100%;
+            min-width: 18rem;
+            border: none;
+            outline: none;
+            background: transparent;
+            scale: 1.2;
+            color: var(--text-primary);
+        }
+    }
+
+    .group-select {
+        align-self: start;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .75rem;
+    }
+
+    select {
+        color: var(--text-primary);
+        background-color: var(--input-bg);
+        padding: .75rem .5rem;
+        border-radius: .75rem;
+        font-size: 1rem;
+    }
+}
+
+.jobs-listings {
+    margin: 2rem 0;
+    border: 3px solid var(--border);
+    border-radius: 1rem;
+
+    article {
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        align-items: start;
+        gap: 1rem;
+
+        small {
+            font-size: 0.875rem;
+            opacity: 0.75;
+        }
+
+        p {
+            margin-top: 0.5rem;
+        }
+        
+        &:last-child {
+            border: none;
+        }
+    }
 }

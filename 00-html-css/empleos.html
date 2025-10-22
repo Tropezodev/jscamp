@@ -13,7 +13,7 @@
       content="empleo, desarrollo web, tecnología, ofertas de trabajo, TropezoDevJobs"
     />
     <meta name="author" content="TropezoDevJobs" />
-    <title>TropezoDevJobs - Inicio</title>
+    <title>TropezoDevJobs - Empleos</title>
   </head>
   <body>
     <header>
@@ -51,7 +51,124 @@
         <a href="#">Iniciar sesión</a>
       </div>
     </header>
-    <main></main>
+    <main id="empleos-main">
+      <section class="jobs-search">
+        <h1>Encuentra tu próximo trabajo</h1>
+        <p>Explora miles de oportunidades en el sector tecnológico</p>
+        <div class="search-bar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+          <input
+            type="text"
+            placeholder="Buscar trabajos, empresas o habilidades"
+          />
+        </div>
+        <div class="group-select">
+          <select id="tech-select">
+            <optgroup label="Tecnología">
+              <option>Java</option>
+              <option>Pythom</option>
+              <option>SQL</option>
+              <option>TypeScript</option>
+            </optgroup>
+          </select>
+          <select id="ubi-select">
+            <optgroup label="Ubicación">
+              <option>Barcelona</option>
+              <option>Madrid</option>
+              <option>Espinardo</option>
+              <option>Purias</option>
+            </optgroup>
+          </select>
+          <select id="contract-select">
+            <optgroup label="Tipo de contrato">
+              <option>Presencial</option>
+              <option>Semi-presencial</option>
+              <option>Teletrabajo</option>
+              <option>Jornada completa</option>
+              <option>Media jornada</option>
+            </optgroup>
+          </select>
+          <select id="exp-select">
+            <optgroup label="Nivel de experiencia">
+              <option>Sin experiencia</option>
+              <option>&gt; 2 años</option>
+              <option>&gt; 4 años</option>
+              <option>Senior</option>
+            </optgroup>
+          </select>
+        </div>
+      </section>
+      <h2>Resultados de búsqueda</h2>
+      <section class="jobs-listings">
+        <article class="jobs-listing-card">
+          <div>
+            <h3>Ingeniero de Software</h3>
+            <small>Tech Solutions Inc. | Remoto</small>
+            <p>
+              Buscamos un ingeniero de software con experiencia en desarrollo
+              web y conocimientos en JavaScript, React y Node.js. El candidato
+              ideal debe ser capaz de trabajar en equipo y tener buenas
+              habilidades de comunicación.
+            </p>
+          </div>
+          <button class="button-apply-job" id="boton-importante">
+            Aplicar
+          </button>
+        </article>
+        <article class="jobs-listing-card">
+          <div>
+            <h3>Analista de Datos</h3>
+            <small>Data Driven Co. | Ciudad de México</small>
+            <p>
+              Estamos buscando un analista de datos con experiencia en el manejo
+              de grandes conjuntos de datos y herramientas de visualización. Se
+              requiere conocimiento en SQL, Python y R.
+            </p>
+          </div>
+          <button class="button-apply-job">Aplicar</button>
+        </article>
+        <article class="job-listing-card">
+          <div>
+            <h3>Desarrollador de Aplicaciones Móviles</h3>
+            <small>Mobile Apps Ltd. | Guadalajara</small>
+            <p>
+              Buscamos un desarrollador de aplicaciones móviles con experiencia
+              en iOS y/o Android. El candidato debe tener conocimientos en
+              Swift, Kotlin y el desarrollo de interfaces de usuario.
+            </p>
+          </div>
+          <button class="button-apply-job">Aplicar</button>
+        </article>
+        <article class="jobs-listing-card">
+          <div>
+            <h3>Ingeniero de DevOps</h3>
+            <small>Cloud Services SA | Remoto</small>
+            <p>
+              Estamos buscando un ingeniero de DevOps con experiencia en la
+              gestión de infraestructuras en la nube, automatización de procesos
+              y herramientas de integración continua. Se requiere conocimiento
+              en AWS, Azure o GCP.
+            </p>
+          </div>
+          <button class="button-apply-job">Aplicar</button>
+        </article>
+      </section>
+    </main>
     <footer>
       <small>&copy; 2025 TropezoDevJobs. Todos los derechos reservados.</small>
     </footer>
