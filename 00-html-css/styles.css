@@ -30,7 +30,7 @@ body {
     line-height: 1.6;
 }
 
-main{
+main {
     padding-bottom: 5rem;
 }
 
@@ -47,7 +47,7 @@ h1+p {
     margin-bottom: 2rem;
 }
 
-body > header {
+body>header {
     border-bottom: 1px solid var(--border);
     background-color: var(--background);
     padding: .8rem 1rem;
@@ -56,16 +56,34 @@ body > header {
     justify-content: space-between;
     gap: 2rem;
 
+    svg {
+        color: var(--primary-light);
+        width: 50px;
+        height: 50px;
+    }
+
     h2 {
         font-size: 1.5rem;
         font-weight: 700;
         color: var(--text-primary);
     }
 
-    svg {
-        color: var(--primary-light);
-        width: 50px;
-        height: 50px;
+    nav {
+        display: flex;
+        gap: 50px;
+        font-size: 1.2rem;
+
+        a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        a:hover {
+            color: var(--text-primary);
+            transform: translateY(-2px);
+            scale: 1.15;
+        }
     }
 
     div {
@@ -79,6 +97,7 @@ body > header {
         text-decoration: none;
         font-weight: 600;
         border-radius: 12px;
+        white-space: nowrap;
     }
 
     div a:nth-child(1) {
@@ -101,24 +120,6 @@ body > header {
         color: var(--text-primary);
         transform: translateY(-2px);
         scale: 1.05;
-    }
-}
-
-nav {
-    display: flex;
-    gap: 50px;
-    font-size: 1.2rem;
-
-    a {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-weight: 400;
-    }
-
-    a:hover {
-        color: var(--text-primary);
-        transform: translateY(-2px);
-        scale: 1.15;
     }
 }
 
@@ -182,21 +183,23 @@ nav {
     background-color: var(--primary-hover);
 }
 
-main > section:nth-child(2) {
+main>section:nth-child(2) {
     padding: 0rem 4rem;
 }
 
-main > section:nth-child(2) header{
+main>section:nth-child(2) header {
     align-items: center;
     text-align: center;
     padding-top: 5rem;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
-    h2{
+
+    h2 {
         font-size: 2rem;
     }
-    p{
+
+    p {
         text-align: center;
         width: 70%;
     }
@@ -241,7 +244,7 @@ main>section:nth-child(2) footer article {
     }
 }
 
-body > footer{
+body>footer {
     color: var(--text-muted);
     text-align: center;
     padding: 1rem;
